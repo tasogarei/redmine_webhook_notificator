@@ -1,0 +1,9 @@
+ <h2>Webhook</h2>
+ <div class="box">
+  <%= form_with do |form| %>
+    <%= form.hidden_field :project_id, value: @project.id %>
+    <%= form.label :url, "URL:" %>
+    <%= form.text_field :url, style: "width: 50%", value: @webhook.url %>
+    <%= form.submit "保存" %>
+  <% end %>
+</div>
