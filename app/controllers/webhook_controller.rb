@@ -1,7 +1,7 @@
 class WebhookController < ApplicationController
 
   def index
-    @project = Project.find_by(name: params[:project_id])
+    @project = Project.find_by(identifier: params[:project_id])
     @webhook = Webhook.find_or_initialize_by(project_id: @project.id)
   end
 
