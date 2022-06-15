@@ -10,7 +10,7 @@ module RedmineIssuesHook
 
       issue_url = context[:controller].issue_url(context[:issue])
 
-      execute(false, webhook_url, context[:issue], issue_url)
+      execute(true, webhook_url, context[:issue], issue_url)
     end
 
     def controller_issues_edit_after_save(context)
